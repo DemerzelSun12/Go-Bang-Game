@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+/* 整体 */
+#container {
+    width: 950px;
+    height: 800px;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+/* 整体棋盘 */
+#board {
+    position: relative;
+    width: 750px;
+    height: 800px;
+    background-color: rgb(213, 176, 146);
+    float: left;
+    overflow: hidden;
+}
+
+/* X,Y轴值 */
+#position {
+    position: absolute;
+    z-index: 1;
+    left: 25px;
+    font-weight: 600;
+}
+
+/* 下棋部分 */
+#board .board {
+    width: 700px;
+    height: 700px;
+    margin: 50px auto;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    border: 1px solid black;
+}
+
+.board td {
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+/* 提示最后一步下棋位置 */
+#location {
+    top: -500px;
+    position: absolute;
+    z-index: 0;
+    width: 50px;
+    height: 50px;
+    background: url("../images/location.png") no-repeat center center;
+}
+
+/* 棋子大部分样式 */
+.chess {
+    box-sizing: border-box;
+    border: 1px solid #424242;
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 2px 2px 3px black;
+    z-index: 1;
+}
+
+/* 控制塔 */
+#control {
+    padding-top: 50px;
+    text-align: center;
+    width: 200px;
+    height: 750px;
+    float: left;
+}
+
+/* 开始按钮 */
+#control #start {
+    width: 150px;
+    height: 50px;
+    font-size: 28px;
+    line-height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid #424242;
+    outline: none;
+    background-color: #ff941a;
+    color: #fff;
+    -webkit-transition: background 0.3s, color 0.3s;
+    transition: background 0.3s, color 0.3s;
+}
+
+#control #start:hover {
+    color: #ff941a;
+    background-color: #fff;
+}
+
+#control p {
+    text-align: center;
+    font-size: 24px;
+
+}
+
+/* 提示当前下棋是谁 */
+#control #now {
+    position: static;
+    margin: 25px auto;
+    cursor: pointer;
+    background-color: #000;
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s;
+}
+
+#control .setTime {
+    margin-bottom: 20px;
+}
+
+#control .setTime h2 {
+    margin-bottom: 15px;
+}
+
+#control .setTime span {
+    font-size: 24px;
+}
+
+#control .setTime input {
+    width: 50px;
+    height: 30px;
+    font-size: 24px;
+}
