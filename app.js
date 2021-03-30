@@ -6,7 +6,7 @@ const WebSocket = require('ws')
 const server = http.Server(app)
 app.use('/public', express.static(path.join(__dirname, 'public')))
 
-server.listen(8080 , () => {
+server.listen(4345 , () => {
   console.log('服务器已开启');
 })
 
