@@ -119,20 +119,3 @@ ul li {
     transition: background 0.3s;
 }
 
-#control .setTime {
-    margin-bottom: 20px;
-}
-
-#control .setTime h2 {
-    margin-bottom: 15px;
-}
-
-#control .setTime span {
-    font-size: 24px;
-}
-
-#control .setTime input {
-    width: 50px;
-    height: 30px;
-    font-size: 24px;
-}
