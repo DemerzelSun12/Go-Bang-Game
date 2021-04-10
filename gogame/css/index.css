@@ -61,7 +61,7 @@ ul li {
     background: url("../images/location.png") no-repeat center center;
 }
 
-/* 棋子大部分样式 */
+/* 棋子样式 */
 .chess {
     box-sizing: border-box;
     border: 1px solid #424242;
@@ -73,7 +73,7 @@ ul li {
     z-index: 1;
 }
 
-/* 控制塔 */
+/* 控制部分 */
 #control {
     padding-top: 50px;
     text-align: center;
@@ -106,7 +106,6 @@ ul li {
 #control p {
     text-align: center;
     font-size: 24px;
-
 }
 
 /* 提示当前下棋是谁 */

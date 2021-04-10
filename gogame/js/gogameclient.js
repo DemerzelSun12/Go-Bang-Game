@@ -11,7 +11,7 @@
   var spanY = document.getElementById("y"); //Y坐标轴
   var nowChess = document.getElementById('now'); //可视化当前是谁在下棋
   let matching = document.getElementById('matching');  // 匹配对手的标签
-  let $msg = document.getElementById('msg');
+  let $msg = document.getElementById('msg');// 界面显示消息
   var chesses; //所有棋子
   let ws = null;  // 创建websocket
   let waiting = false;
@@ -89,8 +89,8 @@
     chesses = document.createElement('div');
     chesses.id = 'chess-container';
     boards.appendChild(chesses);
-    board.onclick = down;
     board.onmousemove = move;
+    board.onclick = down;
     startBtn.innerHTML = "重新开始";
     downed.style.top = "-500px";
     $msg.style.display = "block";
@@ -106,7 +106,7 @@
     }
     if (confirm("是否开始游戏？")) {
       ws = new WebSocket("ws:" + window.location.href.split("http:")[1]);
-      // ws = new WebSocket("ws://localhost")
+      // ws = new WebSocket("ws://localhost:4345")
       waiting = true;
       $msg.style.display = "none";
       ws.onopen = function (e) {
